@@ -28,10 +28,10 @@ $(function(){
         .children().last() //第二个子div中最后一个span
         .html(`<a href="javascript:;">${product.cuxiao}</a>`);
 
-        $("#ru").html(`<a class="btn pt-3 pb-2 pl-5 pr-5" href="javascript:;"><h5>立即购买</h5></a>
-        <a class="btn pt-3 pb-2 pl-5 pr-5 ww" href="06_gouwuche.html?lid=1" target="_blank">
-         <h5><img src="img/product_detail/product_detail_img7.png">加入购物车</h5>
-       </a>`);
+      //   $("#ru").html(`<a class="btn pt-3 pb-2 pl-5 pr-5" href="javascript:;"><h5>立即购买</h5></a>
+      //   <a class="btn pt-3 pb-2 pl-5 pr-5 ww" href="06_gouwuche.html?lid=1" target="_blank">
+      //    <h5><img src="img/product_detail/product_detail_img7.png">加入购物车</h5>
+      //  </a>`);
 
         //放大镜效果
         //1.将获得的商品图片放到对应的位置
