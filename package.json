@@ -1,0 +1,25 @@
+{
+  "name": "club",
+  "version": "1.0.0",
+  "description": "一个简单的商城",
+  "main": "pool.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wiw15/club.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wiw15/club/issues"
+  },
+  "homepage": "https://github.com/wiw15/club#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mysql": "^2.17.1"
+  }
+}

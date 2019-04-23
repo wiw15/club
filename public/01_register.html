@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>俱乐部</title>
+  <link rel="stylesheet" href="./css/01_register.css">	
+ </head>
+ <body>
+ <div class="t">
+	 <img src="./img/图标1-1.png"><img src="./img/艺术字1-1.png" id="q">
+	 <img src="./img/小图标5.jpg" class="q_1">
+ </div>
+<!-- <form action="/user/index" method="post"> -->
+  <div class="d">
+    <div class="dd1">
+	  <a href="https://cuxiao.suning.com/1212bf1zn.html" target="_block"><img src="img/2.png"></a>
+	    <div class="d1">
+		  <div class="d2">
+		    <div class="d3">
+			  <p class="zhu"><b>会员注册</b></p>
+			  <p class="denglu">已注册可<a href="02_register.html" target="_block">直接登录</a></p>
+		    </div>
+		  </div>
+		  <hr>
+		<div class="d4">
+		  <div class="d5">
+			<div class="kongge"></div>
+				<input type="text" id="yong" placeholder="请输入用户名" name="name">
+				<div class="yong_3"><!--用户名判断 文字警告 和 OK图片-->
+					 <span>3~8个汉字、或下划线的组合</span>
+				</div>
+			<div class="kongge"></div>
+				<input type="password" id="mima" placeholder="请输入密码6-12个字符" name="upwd">
+				<div class="yong_3"><!--密码判断 文字警告 -->
+					<span>6~20位数字</span>
+			 </div>
+			<div class="kongge"></div>
+				<input type="text" id="shouji" placeholder="请输入手机号" name="phone">
+				<div class="yong_3"><!--密码判断 文字警告 -->
+					<span>请输入11位手机号</span>
+			 </div>
+			<div class="kongge"></div>
+			<div class="d6">
+			  <input type="text" id="yan" placeholder="请输入验证码" name="code">
+			  <a href="javascript:;" class="yan2">获取验证码</a>
+			  <div class="kongge"></div>
+			  <input type="checkbox" id="w"><label for="w">我已阅读并接受以下条款:</label><br>
+			  <a href="javascript:;">《俱乐部服务条款》</a>
+			  <a href="javascript:;">《隐私条款》</a>
+			  <a href="javascript:;">《俱乐部支付服务协议》</a>
+			  <a href="javascript:;">《俱乐部信用服务协议》</a>
+			  <div class="kongge"></div>
+			  <div class="d7">	
+				<a href="javascript:index();">
+					<div></div>
+				  <input type="button" value="立即注册" onclick="index()" id="btn">
+			  </a>
+				</div> 
+			</div>			
+		  </div>
+	    </div>
+      </div>
+    </div>
+  </div>
+<!-- </form>   -->
+
+<div class="kongge"></div>
+<!-- 结尾 -->
+  <div class="w">
+    <div class="s">
+      <div class="link">
+	    <a href="javascript:;">关于我们</a>|
+	    <a href="javascript:;">联系我们</a>|
+		  <a href="javascript:;">人才招聘</a>|
+			<a href="javascript:;">商家入驻</a>|
+			<a href="javascript:;">广告服务</a>|
+			<a href="javascript:;">手机俱乐部</a>|
+			<a href="javascript:;">友情链接</a>|
+			<a href="javascript:;">销售联盟</a>|
+			<a href="javascript:;">俱乐部社区</a>|
+			<a href="javascript:;">俱乐部公益</a>
+	  </div>
+	  <div class="kongge"></div>
+		<div class="copy">
+		  Copyright&nbsp; あ&nbsp;2000-2000&nbsp;&nbsp;俱乐部JLB.com&nbsp;版权所有
+		</div>
+	</div>
+	</div>
+
+<!-- ajax 注册 -->
+<script>
+var btn=document.getElementById("btn");	
+//console.log(btn);
+//var isRegister=false;
+function index(){
+	var xhr=new XMLHttpRequest();
+	xhr.onreadystatechange=function(){
+		if(xhr.readyState==4&&xhr.status==200){
+			var result=xhr.responseText;
+			//console.log(result);
+			//var div=btn.previousElementSibling;
+			//console.log(div);
+			if(result==1){
+				 //div.style.color="#2ad181";
+				 //div.innerHTML="注册成功，即将跳转到登录页";
+				setTimeout(function(){
+					alert("注册成功，请点击'确定'进入登录页面  n(*≧▽≦*)n");
+				   window.location.href ="02_register.html";
+				},3000)				
+			}
+		}
+	}
+	xhr.open("post","/user/index",true);
+	xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	var formdata="name="+yong.value+"&upwd="+mima.value+"&phone="+shouji.value+"&code="+yan.value;
+	//console.log(formdata);
+	xhr.send(formdata);
+}
+</script>	
+
+
+
+<script>
+//1.查找要触发的事件元素
+var textName=document.getElementById("yong"); //查找的是用户名文本框
+var textPwd=document.getElementById("mima");  //查找的是密码文本框
+var textshouji=document.getElementById("shouji"); //查找的是手机号文本框
+
+//2.绑定事件处理函数 用户名的
+//当处理函数失去焦点时
+textName.onblur=function(){
+	vali(this,/^[\u4e00-\u9fa5]{3,8}$/);
+}
+function vali(txt,reg){
+  //3.查找要修改的元素
+	var div=textName.nextElementSibling; //用户名的下一个兄弟
+	var span=div.children[0];
+	//4.修改元素
+	if(reg.test(textName.value)==true){
+		div.className="yong_1";
+		span.textContent=""; //把span里面的内容清空
+	}else{
+		div.className="yong_2";
+	}
+}
+
+//验证密码
+textPwd.onblur=function(){
+	Miman(this,/^\d{6,20}$/);
+}
+function Miman(txt,reg){
+	//查找要修改的元素
+	var div=textPwd.nextElementSibling; //密码的下一个兄弟
+	var span=div.children[0];
+	//修改元素
+	if(reg.test(textPwd.value)==true){
+		div.className="yong_1";
+		span.textContent=""; //把span里面的内容清空
+	}else{
+		div.className="yong_4";
+	}
+}
+
+//验证手机号
+textshouji.onblur=function(){
+	Shouji(this,/^1[3-8]\d{9}$/);
+}
+function Shouji(txt,reg){
+	//查找要修改的元素
+	var div=textshouji.nextElementSibling; //密码的下一个兄弟
+	var span=div.children[0];
+	//修改元素
+	if(reg.test(textshouji.value)==true){
+		div.className="yong_1";
+		span.textContent=""; //把span里面的内容清空
+	}else{
+		div.className="yong_5";
+	}
+}
+
+</script>
+	
+ </body>
+</html>
