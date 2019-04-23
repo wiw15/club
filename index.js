@@ -7,7 +7,7 @@ const shouye=require('./routes/shouye.js');
 const gouwuche=require('./routes/gouwuche.js');
 
 var server=express();
-server.listen(3000);
+server.listen(5050);
 
 //使用body-parser中间件
 server.use(bodyParser.urlencoded({extended:false}));
