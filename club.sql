@@ -1,9 +1,9 @@
-SET NAMES UTF8;
-DROP DATABASE IF EXISTS Club;
-CREATE DATABASE Club CHARSET=UTF8;
-USE Club;
+-- SET NAMES UTF8;
+-- DROP DATABASE IF EXISTS Club;
+-- CREATE DATABASE Club CHARSET=UTF8;
+-- USE Club;
 
-/**user_zhuche 用户注册**/
+-- /**user_zhuche 用户注册**/
 CREATE TABLE user_zhuche(
   sid       INT PRIMARY KEY AUTO_INCREMENT,   #编号
   name      VARCHAR(12),		              #用户名
@@ -12,13 +12,13 @@ CREATE TABLE user_zhuche(
   code      VARCHAR(6)                        #验证码
 );
 
-/** 用户注册 **/
+-- /** 用户注册 **/
 INSERT INTO user_zhuche VALUES
 ('1','wwww',123456,'12121212121','123456'),
 ('2','dongdong',1234567,'000000','123');
 
 
-/**user_neirong 商品**/
+-- /**user_neirong 商品**/
 CREATE TABLE user_neirong(
   lid       INT PRIMARY KEY AUTO_INCREMENT,   #编号
   family_id INT,                              #家族编号
@@ -32,7 +32,7 @@ CREATE TABLE user_neirong(
   href      VARCHAR(128)                      #跳转的路径
 );
 
-/**user_tupian 商品图片**/
+-- /**user_tupian 商品图片**/
 CREATE TABLE user_tupian(
   pid INT PRIMARY KEY AUTO_INCREMENT,         #编号
   laptop_id INT,                              #女装新品编号
@@ -41,7 +41,7 @@ CREATE TABLE user_tupian(
   lg VARCHAR(128)                             #大图片路径
 );
 
-/** 购物车 **/
+-- /** 购物车 **/
 CREATE TABLE gouwuche(
   lid       INT PRIMARY KEY AUTO_INCREMENT,   #编号
   uid       INT,                              #用户id
@@ -54,9 +54,9 @@ CREATE TABLE gouwuche(
 
 
 
-/** 数据导入 **/
-/**************/
-/**user_neirong 商品详情**/
+-- /** 数据导入 **/
+-- /**************/
+-- /**user_neirong 商品详情**/
 INSERT INTO user_neirong VALUES
 (null,1,'红蜻蜓 连衣裙长袖2019春季新款粉色V领系带印花甜美中长款百搭淑女修身显瘦欧洲站雪纺性感连衣裙女装 图片色 M','红蜻蜓品牌授权！品质保障！售后无忧！请放心购买！',259.00,'满2件，总价打9折，满3件，总价打8折','S M L XL',500,'img/shang_neirong/shangpin/liebiao/1.jpg','05_xiangqin.html?lid=1'),
 (null,2,'红蜻蜓 连衣裙女长袖2019春夏新款九分袖A字裙中长款百搭淑女修身显瘦裙子欧洲站雪纺性感连衣裙女装 图片色 M','红蜻蜓品牌授权！品质保障！售后无忧！请放心购买！',249.00,'满2件，总价打9折，满3件，总价打8折','S M L XL',500,'img/shang_neirong/shangpin/liebiao/2.jpg','05_xiangqin.html?lid=2'),
@@ -80,7 +80,7 @@ INSERT INTO user_neirong VALUES
 (null,20,'韩潮袭人 长袖衬衫女2019春装新款韩版休闲纯色拼接女士打底衬衣百搭修身显瘦娃娃领打底衫 水银灰 L','直击底价，后惠无期',128.00,'满2件，总价打8折；满3件，总价打7折','M L XL',100,'img/shang_neirong/shangpin/liebiao/20.jpg','05_xiangqin.html?lid=20');
 
 
-/**user_tupian 商品图片**/
+-- /**user_tupian 商品图片**/
 INSERT INTO user_tupian VALUES
 (NULL,1,'img/shang_neirong/shangpin/sm/1-1.jpg','img/shang_neirong/shangpin/md/1-1.jpg','img/shang_neirong/shangpin/lg/1-1.jpg'),
 (NULL,1,'img/shang_neirong/shangpin/sm/1-2.jpg','img/shang_neirong/shangpin/md/1-2.jpg','img/shang_neirong/shangpin/lg/1-2.jpg'),
@@ -199,7 +199,7 @@ INSERT INTO user_tupian VALUES
 (NULL,20,'img/shang_neirong/shangpin/sm/20-5.jpg','img/shang_neirong/shangpin/md/20-5.jpg','img/shang_neirong/shangpin/lg/20-5.jpg');
 
 
-/**gouwuche 购物车列表**/
+-- /**gouwuche 购物车列表**/
 INSERT INTO gouwuche VALUES
 (null,1,1,'红蜻蜓 连衣裙长袖2019春季新款粉色V领系带印花甜美中长款百搭淑女修身显瘦欧洲站雪纺性感连衣裙女装 图片色 M','红蜻蜓品牌官方旗舰店',259.00,'img/shang_neirong/shangpin/liebiao/1.jpg'),
 (null,1,2,'红蜻蜓 连衣裙女长袖2019春夏新款九分袖A字裙中长款百搭淑女修身显瘦裙子欧洲站雪纺性感连衣裙女装 图片色 M','红蜻蜓品牌官方旗舰店',249.00,'img/shang_neirong/shangpin/liebiao/2.jpg'),
