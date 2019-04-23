@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		* { 
+			margin: 0; 
+			padding: 0;
+		}
+		body{ 
+			background-color:#fff;
+		}
+		#div1{ 
+			width: 990px; 
+			height: 275px; 
+			position: relative;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		#div1 ul { 
+			width: 990px;
+			height: 275px;
+			position: relative; 
+			margin:0;
+			padding:0;
+		}
+		#div1 ul li { 
+			width: 190px;
+			height: 275px; 
+			list-style: none;
+			float: left;
+			margin: 0 3px;
+		}
+    #div1 ul li a{
+		  text-decoration:none;
+			color:#666;
+		}
+    #div1 ul li a p{
+		  width: 160px;
+			padding: 0 15px;
+			text-overflow: ellipsis;/* 把多余的显示为省略号 */
+      overflow: hidden; /* 溢出隐藏 */
+			white-space: nowrap; /* 把下面多余的隐藏掉 */
+			font-size:13px;
+		}
+		#div1 ul li a:hover{
+		  color:#e6382f;
+		}
+		#div1 ul li img {
+			width: 200px;
+			height: 150px; 
+			display: inline-block;
+		}
+		#div1>ul>li>a>img{
+			width:140px;
+			height:140px;
+			margin:40px 26px 0; 
+		}
+    #div1 ul li .li_1{
+			width: 140px;
+			height: 22px; 
+		  margin:30px 20px 0;
+			border:1px solid #e6382f;
+			text-align:center;
+		}
+		#div1 ul li .li_1 .span_1{
+		  float: left;
+			padding:2px 2px 2px 2px;
+			color:#fff;
+			background:#e6382f;
+      font-size:14px;
+			font-weight: bold;
+		}
+		#div1 ul li .li_1 .span_2{
+			color:#b7bcb8;
+			background:#fff;
+			font-size:12px;
+		}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var odiv = document.getElementById('div1');
+				var oul = odiv.getElementsByTagName('ul')[0];
+				var ali = oul.getElementsByTagName('li');
+				var spa = -2;				
+				oul.innerHTML=oul.innerHTML+oul.innerHTML;
+				oul.style.width=ali[0].offsetWidth*ali.length+'px';
+				function move(){
+					if(oul.offsetLeft<-oul.offsetWidth/2){
+						oul.style.left='0';
+					}
+					if(oul.offsetLeft>0){
+						oul.style.left=-oul.offsetWidth/2+'px'
+					}
+					oul.style.left=oul.offsetLeft+spa+'px';
+				}
+				var timer = setInterval(move,50)
+				
+				odiv.onmousemove=function(){clearInterval(timer);}
+				odiv.onmouseout=function(){timer = setInterval(move,30)};
+			}
+		</script>
+	</head>
+	<body>
+
+		<div id="div1">
+			<ul>
+				<li>
+					<a href="../04_neirong.html" target="_blank" title="酷MA萌儿童保温杯带吸管两用宝宝男女学生水杯316不锈钢保温杯宝宝学饮杯子便携水壶550ml 智慧蓝">
+					  <img src="my_img/1.jpg"/>
+            <p>酷MA萌儿童保温杯带吸管两用宝宝男女学生水杯316不锈钢保温杯宝宝学饮杯子便携水壶550ml 智慧蓝</p>
+            <div class="li_1">
+					    <span class="span_1">¥69.00</span>
+						  <span class="span_2"><s>¥128.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" target="_blank" title="五粮液股份公司 金六福 经典四星 45度白酒 整箱装500ml*6瓶">
+					  <img src="my_img/2.jpg"/>
+            <p>五粮液股份公司 金六福 经典四星 45度白酒 整箱装500ml*6瓶</p>
+            <div class="li_1">
+					    <span class="span_1">¥289.00</span>
+						  <span class="span_2"><s>¥378.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" target="_blank" title="花王(Merries)婴儿拉拉裤XL44片 加大号学步裤(12-22kg)(日本原装进口)">
+					  <img src="my_img/3.jpg"/>
+            <p>花王(Merries)婴儿拉拉裤XL44片 加大号学步裤(12-22kg)(日本原装进口)</p>
+            <div class="li_1">
+					    <span class="span_1">¥103.00</span>
+						  <span class="span_2"><s>¥139.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" target="_blank" title="努比亚 nubia 红魔 全面屏 游戏手机 8GB+128GB 烈焰红移动联通电信4G手机 双卡双待">
+					  <img src="my_img/4.jpg"/>
+            <p>努比亚 nubia 红魔 全面屏 游戏手机 8GB+128GB 烈焰红移动联通电信4G手机 双卡双待</p>
+            <div class="li_1">
+					    <span class="span_1">¥2199.00</span>
+						  <span class="span_2"><s>¥2499.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" target="_blank" title="【贴心保护套】ROG游戏手机 8GB+512GB 黑色晓龙845 冷凝散热 全面屏 全网4G双卡双待">
+					  <img src="my_img/5.jpg"/>
+            <p>【贴心保护套】ROG游戏手机 8GB+512GB 黑色晓龙845 冷凝散热 全面屏 全网4G双卡双待</p>
+            <div class="li_1">
+					    <span class="span_1">¥8288.00</span>
+						  <span class="span_2"><s>¥8888.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="克徕帝（CRD）砖石18K金钻石戒指订婚戒指 公主排钻 共约25分|玫瑰金内镶红宝石款|G0708ER">
+					  <img src="my_img/6.jpg"/>
+            <p>克徕帝（CRD）砖石18K金钻石戒指订婚戒指 公主排钻 共约25分|玫瑰金内镶红宝石款|G0708ER</p>
+            <div class="li_1">
+					    <span class="span_1">¥1699.00</span>
+						  <span class="span_2"><s>¥3598.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="TP-LINK双千兆路由器 无线家用穿墙1200M高速双屏wifi WDR5660千兆版 千兆端口光纤适用">
+					  <img src="my_img/7.jpg"/>
+            <p>TP-LINK双千兆路由器 无线家用穿墙1200M高速双屏wifi WDR5660千兆版 千兆端口光纤适用</p>
+            <div class="li_1">
+					    <span class="span_1">¥155.00</span>
+						  <span class="span_2"><s>¥179.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="卡罗德（CAROD）全新演奏立式钢琴CJ3 钢琴王子理查德签名 代言款 123高度 黑色">
+					  <img src="my_img/8.jpg"/>
+            <p>卡罗德（CAROD）全新演奏立式钢琴CJ3 钢琴王子理查德签名 代言款 123高度 黑色</p>
+            <div class="li_1">
+					    <span class="span_1">¥17699.00</span>
+						  <span class="span_2"><s>¥21000.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="同溢堂 益安宁丸 112粒*3瓶 香港同溢堂冠心病药">
+					  <img src="my_img/9.jpg"/>
+            <p>同溢堂 益安宁丸 112粒*3瓶 香港同溢堂冠心病药</p>
+            <div class="li_1">
+					    <span class="span_1">¥790.00</span>
+						  <span class="span_2"><s>¥880.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="Apple iPad Pro 平板电脑2017款12.9英寸（256G WLAN+Cellular版/A10X MPCM2CH/A）深色灰色">
+					  <img src="my_img/10.jpg"/>
+            <p>Apple iPad Pro 平板电脑2017款12.9英寸（256G WLAN+Cellular版/A10X MPCM2CH/A）深色灰色</p>
+            <div class="li_1">
+					    <span class="span_1">¥6538.00</span>
+						  <span class="span_2"><s>¥8688.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="惠普(HP)星 13-an0004TU 13.3英寸轻薄笔记本电脑(i5-8265U 8G 256G PCIE SSD UMA FHD IPS 72%色域)粉">
+					  <img src="my_img/11.jpg"/>
+            <p>惠普(HP)星 13-an0004TU 13.3英寸轻薄笔记本电脑(i5-8265U 8G 256G PCIE SSD UMA FHD IPS 72%色域)粉</p>
+            <div class="li_1">
+					    <span class="span_1">¥4566.00</span>
+						  <span class="span_2"><s>¥4999.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="正版车载cd碟片经典老歌话语汽车cd唱片歌碟无损音质黑胶光盘歌曲">
+					  <img src="my_img/12.jpg"/>
+						<p>正版车载cd碟片经典老歌话语汽车cd唱片歌碟无损音质黑胶光盘歌曲</p>
+            <div class="li_1">
+					    <span class="span_1">¥19.90</span>
+						  <span class="span_2"><s>¥46.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="VERSACE JEANS 范思哲 奢饰品 18秋冬新款 女士黑色聚酯纤维零钱包卡夹 E3VSBPN1 70787 899">
+					  <img src="my_img/13.jpg"/>
+            <p>VERSACE JEANS 范思哲 奢饰品 18秋冬新款 女士黑色聚酯纤维零钱包卡夹 E3VSBPN1 70787 899</p>
+            <div class="li_1">
+					    <span class="span_1">¥499.00</span>
+						  <span class="span_2"><s>¥890.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="菜百首饰 黄金9999 梯形投资金条 支持回购 20g">
+					  <img src="my_img/14.jpg"/>
+						<p>菜百首饰 黄金9999 梯形投资金条 支持回购 20g</p>
+            <div class="li_1">
+					    <span class="span_1">¥5890.00</span>
+						  <span class="span_2"><s>¥6400.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="佳能（Canon）EOS 6D 单反套机（EF 24-70mmf/4L IS USM 镜头）">
+					  <img src="my_img/15.jpg"/>
+            <p>佳能（Canon）EOS 6D 单反套机（EF 24-70mmf/4L IS USM 镜头）</p>
+            <div class="li_1">
+					    <span class="span_1">¥8998.00</span>
+						  <span class="span_2"><s>¥13699.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="斐珞尔（FOREO）洁面仪 硅胶电动毛孔清洁美容按摩洗脸仪 露娜迷你2代 LUNA MINI2 粉红色">
+					  <img src="my_img/16.jpg"/>
+            <p>斐珞尔（FOREO）洁面仪 硅胶电动毛孔清洁美容按摩洗脸仪 露娜迷你2代 LUNA MINI2 粉红色</p>
+            <div class="li_1">
+					    <span class="span_1">¥869.00</span>
+						  <span class="span_2"><s>¥1280.00</s></span>
+					  </div>
+					</a>
+				</li>
+        <li>
+					<a href="../04_neirong.html" title="玛丽黛佳（MARIEDALGAR）无感大师水域亮肤气垫霜(1+1)(木兰迟)20g*2（滋润 遮瑕提亮肤色 bb霜 气垫cc霜）">
+					  <img src="my_img/17.jpg"/>
+            <p>玛丽黛佳（MARIEDALGAR）无感大师水域亮肤气垫霜(1+1)(木兰迟)20g*2（滋润 遮瑕提亮肤色 bb霜 气垫cc霜）</p>
+            <div class="li_1">
+					    <span class="span_1">¥178.00</span>
+						  <span class="span_2"><s>¥198.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="超图解英语单词，英语口语入门词汇一本就搞定">
+					  <img src="my_img/18.jpg"/>
+            <p>超图解英语单词，英语口语入门词汇一本就搞定</p>
+            <div class="li_1">
+					    <span class="span_1">¥19.90</span>
+						  <span class="span_2"><s>¥33.80</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="红颜奶油草莓 约重500g/15-20颗 新鲜水果">
+					  <img src="my_img/19.jpg"/>
+            <p>红颜奶油草莓 约重500g/15-20颗 新鲜水果</p>
+            <div class="li_1">
+					    <span class="span_1">¥36.90</span>
+						  <span class="span_2"><s>¥109.00</s></span>
+					  </div>
+					</a>
+				</li>
+				<li>
+					<a href="../04_neirong.html" title="斐珞尔（FOREO）洁面仪 硅胶电动毛孔清洁美容按摩洗脸仪 露娜迷你2代 LUNA MINI2 粉红色">
+					  <img src="my_img/20.jpg"/>
+            <p>臻邦 ZHENBANG 拖把 免手洗 胶棉拖把海绵拖把挤水地拖墩布干湿两用清洁工具</p>
+            <div class="li_1">
+					    <span class="span_1">¥29.80</span>
+						  <span class="span_2"><s>¥58.00</s></span>
+					  </div>
+					</a>
+				</li>
+			</ul>			
+		</div>
+	</body>
+</html>

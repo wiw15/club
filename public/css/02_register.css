@@ -1,0 +1,149 @@
+body{
+  margin:0;padding:0;
+}
+a{
+  text-decoration:none;
+}
+.t{
+  margin-left:auto;
+  margin-right:auto;
+  width:1000px;
+  height:100px;
+}
+.t img{
+  width:100px;
+}
+#q{
+  width:200px;
+  padding-bottom:12px;
+}
+.t .q_1{
+  width:240px;
+  height:100px;
+  float: right;
+}
+.d{
+  width:100%;
+  background:#de112e;
+}
+.dd1{
+  width:970px;
+  height:570px;
+  margin:0 auto;
+  padding-top:30px;
+}
+.dd1 img{
+  width:600px;
+  height:570px;
+}
+.d1{
+  float:right;
+  width:360px;
+  height:400px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:80px;
+  background-color:#ffffff;
+}
+.d2{
+  width:360px;
+  height:51px;
+  background-color:#ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+.d3{
+  width:300px;
+  height:51px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.d3 .zhu{
+  margin: 0;
+  float: left;
+  font-size: 25px;
+  margin-top: 10px;
+  color: #666;
+}
+.d4{
+  width:360px;
+  height:350px;
+}
+.d5{
+  padding:10px 30px;
+  width:300px;
+  height:310px;
+}
+.d6{
+  width:300px; 
+}
+.d6 a{
+	color:#666; 
+	font-size:14px; 
+}
+.d6 a:hover{
+	color:#de112e; 
+}
+.d7 input{
+  width:300px;
+  height:40px;
+  margin: 0 auto;
+}
+.d7 input{
+  cursor: pointer; /* 改变鼠标的悬停时的样式 pointer 小手样式 */
+}
+.kongge{
+  width:300px;
+  height:19px;
+}
+.denglu{
+  padding-top:7px;
+  float:right;
+  font-size:14px;
+}
+#yong{
+  padding-left:40px;
+  width:248px;
+  height:32px;
+  background-image: url('../img/小图标4.png');
+	background-repeat: no-repeat; /* 背景图不平铺 */
+	background-position: 8px 8px; /* 背景图x y 轴的移动 */
+}
+#mima{
+  padding-left:40px;
+  width:248px;
+  height:32px;
+  background-image: url('../img/小图标3.png');
+	background-repeat: no-repeat; /* 背景图不平铺 */
+	background-position: 8px 8px; /* 背景图x y 轴的移动 */
+}
+#mima2{
+  padding-left:40px;
+  width:248px;
+  height:32px;
+  background-image: url('../img/小图标3.png');
+	background-repeat: no-repeat; /* 背景图不平铺 */
+	background-position: 8px 8px; /* 背景图x y 轴的移动 */
+}
+.yan{
+  width:106px;
+  height:32px;
+  padding-left:40px;
+}
+.yan2{
+  float:right;
+  padding-top:16px;
+  padding-right:38px;
+}
+.w{
+  width:990px;
+  margin:0 auto;
+}
+.s{
+  padding-bottom: 30px;
+  text-align: center;
+}
+.s .link a{
+  margin: 0 10px;
+  color:#000000;
+  text-decoration: none;
+}
