@@ -8,7 +8,7 @@ $(function(){
     //获得地址栏中的商品编号lid
     var lid=location.search.split("=")[1];
     $.ajax({
-      url:"http://127.0.0.1:3000/xiangqin",
+      url:"/xiangqin",
       type:"get",
       data:{lid}, //{lid:lid} 用lid作为查询参数
       dataType:"json",
